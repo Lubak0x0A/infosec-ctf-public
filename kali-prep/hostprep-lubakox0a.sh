@@ -1,3 +1,5 @@
+# Host Preparation
+# Remove anything not applicable and run with sudo
 echo 'Updating Repositories and Upgrading Kali'
 apt update && apt upgrade -y && apt autoremove && apt autoclean
 
@@ -27,5 +29,6 @@ wget https://raw.githubusercontent.com/daviddias/node-dirbuster/master/lists/dir
 echo 'Extracting rockyou wordlist'
 gunzip /usr/share/wordlists/rockyou.txt.gz
 
-echo 'Enabling postgresql to run at startup'
-systemctl enable postgresql
+echo 'Preparring console logging folder'
+mkdir /var/log/sessions
+chmod 3777 /var/log/sessions/ 
