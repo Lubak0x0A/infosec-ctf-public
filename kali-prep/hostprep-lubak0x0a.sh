@@ -1,5 +1,6 @@
 # Host Preparation
 # Remove anything not applicable and run with sudo
+# sudo bash hostprep-lubak0x0a.sh
 echo 'Updating Repositories and Upgrading Kali'
 apt update && apt upgrade -y && apt autoremove && apt autoclean
 
