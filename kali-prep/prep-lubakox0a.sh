@@ -2,10 +2,16 @@ echo 'Updating Repositories and Upgrading Kali'
 apt update && apt upgrade -y && apt autoremove && apt autoclean
 
 echo 'Installing addtional packages from repositories'
-apt install gobuster remmina terminator python3-pip -y
+apt install gobuster remmina terminator python3-pip exiftool steghide audacity -y
 
 echo 'Installing addtional Python 3 packages'
 pip3 install stegoveritas xsrfprobe
+
+echo 'Resolving stegoveritas dependencies'
+stegoveritas_install_deps
+
+echo 'Installing Ruby packages'
+gem install zsteg
 
 echo 'Installing Visual Studio Code'
 wget 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64' -O /tmp/code_latest_amd64.deb
@@ -23,9 +29,3 @@ gunzip /usr/share/wordlists/rockyou.txt.gz
 
 echo 'Enabling postgresql to run at startup'
 systemctl enable postgresql
-
-echo 'Updating .zshrc profile'
-echo 'export MSFLOGO=/usr/share/metasploit-framework/data/logos/haKCers.txt' >> ~/.zshrc
-echo 'export DAGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"' >> ~/.zshrc
-echo 'export MAGENT="Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1' >> ~/.zshrc
-echo 'export CAGENT="Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)"' >> ~/.zshrc
