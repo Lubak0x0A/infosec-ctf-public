@@ -32,4 +32,15 @@ gunzip /usr/share/wordlists/rockyou.txt.gz
 
 echo 'Preparring console logging folder'
 mkdir /var/log/sessions
-chmod 3777 /var/log/sessions/ 
+chmod 3777 /var/log/sessions/
+mkdir /var/log/pcaps
+chmod 3777 /var/log/pcaps
+mkdir /opt/lubak0x0a-scripts
+chmod 3777 /opt/lubak0x0a-scripts
+
+cp openvpn-down.sh /opt/lubak0x0a-scripts/openvpn-down.sh
+chmod +x /opt/lubak0x0a-scripts/openvpn-down.sh
+cp openvpn-up.sh /opt/lubak0x0a-scripts/openvpn-up.sh
+chmod +x /opt/lubak0x0a-scripts/openvpn-up.sh
+cp openvpn-recover.sh /opt/lubak0x0a-scripts/openvpn-recover.sh
+chmod +x /opt/lubak0x0a-scripts/openvpn-recover.sh
