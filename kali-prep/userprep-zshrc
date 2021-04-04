@@ -6,7 +6,6 @@ export CAGENT='Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbo
 alias curl="curl -A $DAGENT"
 alias wget="wget -U $DAGENT"
 alias nmap="nmap --script-args\"http.useragent='$DAGENT'\""
-alias openvpn='openvpn --script-security --up /opt/lubak0x0a-scripts/openvpn-up.sh --down /opt/openvpn-down.sh'
 
 # Credit to Damien King, Magesh Maruthamuthu, and Rob Fuller
 autoload -U colors && colors

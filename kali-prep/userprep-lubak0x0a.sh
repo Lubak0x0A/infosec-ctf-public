@@ -12,3 +12,5 @@ declare -a addons=("https://addons.mozilla.org/firefox/downloads/file/3751860/wa
 for addon in ${addons[@]}; do
     echo $addon
 done
+
+cat 'none' > ~/.target
