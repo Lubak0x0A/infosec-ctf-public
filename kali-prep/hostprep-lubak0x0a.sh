@@ -30,7 +30,7 @@ wget https://raw.githubusercontent.com/daviddias/node-dirbuster/master/lists/dir
 echo 'Extracting rockyou wordlist'
 gunzip /usr/share/wordlists/rockyou.txt.gz
 
-echo 'Preparring console logging folder'
+echo 'Preparring logging directories'
 mkdir /var/log/sessions
 chmod 3777 /var/log/sessions/
 mkdir /var/log/pcaps

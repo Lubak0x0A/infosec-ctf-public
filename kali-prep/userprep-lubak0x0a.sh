@@ -13,4 +13,4 @@ for addon in ${addons[@]}; do
     echo $addon
 done
 
-cat 'none' > ~/.target
+echo 'none' > ~/.target
