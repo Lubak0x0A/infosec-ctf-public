@@ -1,2 +1,3 @@
-#!/bin/bash
-tcpdump -i tun0 -s 65535 -w /var/log/pcaps/`cat /home/lubak0x0a/.target`-`date +"%Y%m%d%k%M%S"`.pcap & 
+#!/bin/
+TARGET=`cat '/home/$(logname)/.target'`
+tcpdump -i tun0 -s 65535 -w '/var/log/pcaps/'$TARGET'-'`date +"%Y%m%d%k%M%S"`.pcap -Z $(logname) & 
