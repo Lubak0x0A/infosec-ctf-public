@@ -7,7 +7,7 @@ alias sudo='sudo '
 alias openvpn='openvpn --script-security 2 --up /opt/lubak0x0a-scripts/openvpn-up.sh --down /opt/lubak0x0a-scripts/openvpn-down.sh --config $1'
 alias curl="curl -A $DAGENT"
 alias wget="wget -U $DAGENT"
-alias nmap="nmap --script-args\"http.useragent='$DAGENT'\""
+alias nmap="nmap --script-args \"http.useragent='$DAGENT'\""
 
 # Credit to Damien King, Magesh Maruthamuthu, and Rob Fuller
 autoload -U colors && colors
