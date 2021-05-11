@@ -5,7 +5,7 @@ echo 'Updating Repositories and Upgrading Kali'
 apt update && apt upgrade -y && apt autoremove && apt autoclean
 
 echo 'Installing addtional packages from repositories'
-apt install gobuster remmina terminator python3-pip exiftool steghide audacity -y
+apt install gobuster remmina terminator python3-pip exiftool steghide audacity forensics-all -y
 
 echo 'Installing addtional Python 3 packages'
 pip3 install stegoveritas xsrfprobe
