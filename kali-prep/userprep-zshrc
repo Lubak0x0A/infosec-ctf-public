@@ -8,6 +8,7 @@ alias openvpn='openvpn --script-security 2 --up /opt/lubak0x0a-scripts/openvpn-u
 alias curl="curl -A $DAGENT"
 alias wget="wget -U $DAGENT"
 alias nmap="nmap --script-args \"http.useragent='$DAGENT'\""
+alias autorecon="sudo /opt/autorecon/autorecon.py"
 
 # Credit to Damien King, Magesh Maruthamuthu, and Rob Fuller
 autoload -U colors && colors
