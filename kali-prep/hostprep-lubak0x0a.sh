@@ -40,8 +40,8 @@ chmod 755 /opt/lubak0x0a-scripts
 
 echo 'Installing Autorecon'
 git clone https://github.com/Tib3rius/AutoRecon.git /tmp/AutoRecon
-pip -r /tmp/AutoRecon/requirements.txt 
-cp -r  /tmp/AutoRecon/src/autorecon /opt/autorecon
+pip install -r /tmp/AutoRecon/requirements.txt 
+cp -r /tmp/AutoRecon/src/autorecon /opt/autorecon
 chmod -R 755 /opt/autorecon
 
 cp openvpn-down.sh /opt/lubak0x0a-scripts/openvpn-down.sh
