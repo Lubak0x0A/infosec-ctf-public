@@ -5,7 +5,7 @@ echo 'Updating Repositories and Upgrading Kali'
 apt update && apt upgrade -y && apt autoremove && apt autoclean
 
 echo 'Installing addtional packages from repositories'
-apt install gobuster remmina terminator python3-pip exiftool steghide audacity -y
+apt install gobuster remmina terminator python3-pip exiftool steghide audacity oscanner seclists sipvicious smtp-user-enum tnscmd10g wkhtmltopdf python3-venv -y
 
 echo 'Installing addtional Python 3 packages'
 pip3 install stegoveritas xsrfprobe
@@ -36,7 +36,13 @@ chmod 3777 /var/log/sessions/
 mkdir /var/log/pcaps
 chmod 3777 /var/log/pcaps
 mkdir /opt/lubak0x0a-scripts
-chmod 3777 /opt/lubak0x0a-scripts
+chmod 755 /opt/lubak0x0a-scripts
+
+echo 'Installing Autorecon'
+git clone https://github.com/Tib3rius/AutoRecon.git /tmp/AutoRecon
+pip -r /tmp/AutoRecon/requirements.txt 
+cp -r  /tmp/AutoRecon/src/autorecon /opt/autorecon
+chmod -R 755 /opt/autorecon
 
 cp openvpn-down.sh /opt/lubak0x0a-scripts/openvpn-down.sh
 chmod +x /opt/lubak0x0a-scripts/openvpn-down.sh
