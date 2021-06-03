@@ -5,9 +5,9 @@ export CAGENT='Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbo
 
 alias sudo='sudo '
 alias openvpn='openvpn --script-security 2 --up /opt/lubak0x0a-scripts/openvpn-up.sh --down /opt/lubak0x0a-scripts/openvpn-down.sh --config $1'
-alias curl="curl -A $DAGENT"
-alias wget="wget -U $DAGENT"
-alias nmap="nmap --script-args \"http.useragent='$DAGENT'\""
+#alias curl="curl -A $DAGENT"
+#alias wget="wget -U $DAGENT"
+#alias nmap="nmap --script-args \"http.useragent='$DAGENT'\""
 alias autorecon="sudo /opt/autorecon/autorecon.py"
 
 # Credit to Damien King, Magesh Maruthamuthu, and Rob Fuller
