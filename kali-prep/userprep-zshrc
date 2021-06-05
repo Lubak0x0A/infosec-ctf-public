@@ -14,7 +14,7 @@ alias autorecon="sudo /opt/autorecon/autorecon.py"
 autoload -U colors && colors
 # Set IP ROUTE to target network
 export TARGET=`cat ~/.target`
-PS1='%{$fg[red]%}┌──%{$reset_color%}%{$fg[green]%}[`date  +"%d-%b-%y %T"`] `DGTWINT=$(ip route get 10.10.10.10 | grep via | cut -f 5 -d " ") && \
+# PS1='%{$fg[red]%}┌──%{$reset_color%}%{$fg[green]%}[`date  +"%d-%b-%y %T"`] `DGTWINT=$(ip route get 10.10.10.10 | grep via | cut -f 5 -d " ") && \
 FASTINT=$(grep ^ /dev/null  /sys/class/net/*/speed 2> /dev/null | sort -t: -k 2 | tail -1 | cut -f 5 -d "/") && if [ -n "${DGTWINT}" ] ; then TESTINT="${DGTWINT}"; else \
 TESTINT="${FASTINT}"; fi && IPADDR=$(ip addr show dev "${TESTINT}" | grep "inet " | sed -e "s/.*inet //" | cut -f 1 -d "/") && \
 echo "${TESTINT:0:1}:${IPADDR}"`->$TARGET `pwd`>'$'\n''%{$reset_color%}''%{$fg[red]%}└─$  %{$reset_color%}'

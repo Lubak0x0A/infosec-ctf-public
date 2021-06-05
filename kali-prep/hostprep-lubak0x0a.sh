@@ -5,7 +5,7 @@ echo 'Updating Repositories and Upgrading Kali'
 apt update && apt upgrade -y && apt autoremove && apt autoclean
 
 echo 'Installing addtional packages from repositories'
-apt install gobuster remmina terminator python3-pip exiftool steghide audacity oscanner seclists sipvicious smtp-user-enum tnscmd10g wkhtmltopdf python3-venv -y
+apt install gobuster remmina terminator python3-pip exiftool steghide audacity oscanner seclists sipvicious smtp-user-enum tnscmd10g wkhtmltopdf python3-venv code-oss ghidra -y
 
 echo 'Installing addtional Python 3 packages'
 pip3 install stegoveritas xsrfprobe
@@ -16,9 +16,9 @@ stegoveritas_install_deps
 echo 'Installing Ruby packages'
 gem install zsteg
 
-echo 'Installing Visual Studio Code'
-wget 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64' -O /tmp/code_latest_amd64.deb
-dpkg -i /tmp/code_latest_amd64.deb
+# echo 'Installing Visual Studio Code'
+# wget 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64' -O /tmp/code_latest_amd64.deb
+# dpkg -i /tmp/code_latest_amd64.deb
 
 echo 'Installing Rustscan'
 wget 'https://github.com/RustScan/RustScan/releases/download/2.0.1/rustscan_2.0.1_amd64.deb' -O /tmp/rustscan_2.0.1_amd64.deb
